@@ -7,14 +7,34 @@
     android:layout_height="match_parent"
     tools:context="nyc.c4q.midprogramassessment.LoopActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a number"/>
+
+        <Button
+            android:id="@+id/button_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="counter"
+            android:onClick="onButtonClick"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
