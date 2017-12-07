@@ -5,5 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="nyc.c4q.midprogramassessment.ListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fragment_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fragment"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

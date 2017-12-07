@@ -28,6 +28,9 @@ public class LoopActivity extends AppCompatActivity {
         num = Integer.parseInt(userLimit);
         Counter count = new Counter();
         count.execute(num);
+
+        Intent logIntent = new Intent(LoopActivity.this, LoginActivity.class);
+        startActivity(logIntent);
     }
     private class Counter extends android.os.AsyncTask<Integer, Integer, Integer> {
         ArrayList<Integer> userInts = new ArrayList<>();
@@ -49,8 +52,6 @@ public class LoopActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Integer result) {
             display.setText("Loops completed " + num);
-            Intent logIntent = new Intent(LoopActivity.this, LoginActivity.class);
-            startActivity(logIntent);
         }
     }
 }
